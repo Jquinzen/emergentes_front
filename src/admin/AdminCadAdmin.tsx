@@ -39,9 +39,9 @@ export default function AdminCadAdmin() {
     })
   }, [admins, query, nivel])
 
-  const listaAdmins = filteredAdmins.map((admin) => (
-    <ItemAdmin key={admin.id} adminLinha={admin} admins={admins} setAdmins={setAdmins} />
-  ))
+const listaAdmins = filteredAdmins.map((admin) => (
+  <ItemAdmin key={admin.id} adminLinha={admin} setAdmins={setAdmins} />
+))
 
   function clearFilters() {
     setQuery("")

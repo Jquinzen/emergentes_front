@@ -9,12 +9,12 @@ import {
 type Datum = { x: string; y: number }
 
 type Props = {
-  data: Datum[]                // [{ x: "LavUp", y: 10 }, ...]
-  title?: string               // "Máquinas por Lavanderia"
-  subtitle?: string            // "Distribuição..."
-  // cores “base” das fatias; o gradiente é gerado a partir delas
-  colors: string[]             // ["#0ea5e9", "#22d3ee", ...]
-  height?: number              // altura total do SVG
+  data: Datum[]                
+  title?: string             
+  subtitle?: string          
+ 
+  colors: string[]            
+  height?: number          
 }
 
 export default function VictoryDonutPro({
@@ -39,7 +39,7 @@ export default function VictoryDonutPro({
   }
 
   // largura responsiva usando viewBox
-  const width = 560 // base para layout; escala via viewBox
+  const width = 560 
   const pieSize = 380
   const centerX = width / 2
   const centerY = 210
@@ -81,7 +81,7 @@ export default function VictoryDonutPro({
             innerRadius={95}
             padAngle={2.2}
             cornerRadius={8}
-            labels={() => ""} // rótulos no tooltip, não no arco
+            labels={() => ""} 
             startAngle={90}
             endAngle={-270}
             animate={{ duration: 800, easing: "quadInOut" }}
@@ -107,7 +107,7 @@ export default function VictoryDonutPro({
             labelPosition="centroid"
             x="x"
             y="y"
-            colorScale={colors} // necessário para legend; fill real vai no style abaixo
+            colorScale={colors} 
             style={{
               data: {
                 // aplica gradiente + borda sutil
@@ -116,8 +116,7 @@ export default function VictoryDonutPro({
                 strokeWidth: 1,
               },
             }}
-            // tooltip formatter
-            // @ts-ignore
+         
             labels={tooltipLabel}
           />
 

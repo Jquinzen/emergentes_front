@@ -16,7 +16,7 @@ export function MenuLateral() {
   function adminSair() {
     if (confirm("Confirma Saída?")) {
       deslogaAdmin()
-      navigate("/admin/login", { replace: true }) // ✅ redireciona para tela de login do admin
+      navigate("/admin/login", { replace: true }) 
     }
   }
 

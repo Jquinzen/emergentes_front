@@ -2,15 +2,17 @@ import { useAdminStore } from "../context/AdminContext"
 import type { AdminType } from "../../utils/AdminType"
 import { Trash2, Shield, UserCircle2, Mail } from "lucide-react"
 
+import type { Dispatch, SetStateAction } from "react"
+
 type Props = {
   adminLinha: AdminType
-  admins: AdminType[]
-  setAdmins: React.Dispatch<React.SetStateAction<AdminType[]>>
+  setAdmins: Dispatch<SetStateAction<AdminType[]>>
 }
 
 const apiUrl = import.meta.env.VITE_API_URL
 
-export default function ItemAdmin({ adminLinha, admins, setAdmins }: Props) {
+export default function ItemAdmin({ adminLinha, setAdmins }: Props) {
+
   const { admin } = useAdminStore()
 
   async function excluirAdmin() {

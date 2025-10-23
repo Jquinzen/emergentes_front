@@ -1,13 +1,15 @@
 import { toast } from "sonner"
 import type { LavanderiaType } from "../../utils/LavanderiaType"
 import { Trash2, MapPin, Star } from "lucide-react"
-
+import type { Dispatch, SetStateAction } from "react"
 const apiUrl = import.meta.env.VITE_API_URL
+
+
 
 type Props = {
   lav: LavanderiaType
   lavanderias: LavanderiaType[]
-  setLavanderias: (list: LavanderiaType[]) => void
+  setLavanderias: Dispatch<SetStateAction<LavanderiaType[]>>
 }
 
 export default function ItemLavanderia({ lav, lavanderias, setLavanderias }: Props) {
@@ -49,7 +51,7 @@ export default function ItemLavanderia({ lav, lavanderias, setLavanderias }: Pro
       })
 
       if (!r.ok) {
-        // desfaz otimismo se deu ruim
+      
         setLavanderias(lavanderias)
         const err = await r.json().catch(() => ({}))
         toast.error(err?.erro ?? "Erro ao alternar destaque")

@@ -4,7 +4,7 @@
   display: none !important;
 }
 
-/* Fundo padrão da área atrás do sidebar + conteúdo */
+
 html, body, #root {
   background-color: #f0f9ff4f;
 }

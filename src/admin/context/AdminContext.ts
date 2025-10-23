@@ -6,7 +6,7 @@ export type AdminType = {
   nome: string
   email: string
   nivel: number
-  token: string            // << ADICIONE
+  token: string          
 }
 
 type AdminStore = {

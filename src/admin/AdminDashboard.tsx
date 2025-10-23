@@ -88,15 +88,13 @@ export default function AdminDashboard() {
   // Paleta alinhada à navbar (sky/teal)
   const colorScaleLav = ["#0ea5e9", "#38bdf8", "#22d3ee", "#14b8a6", "#2dd4bf", "#0d9488"]
   const colorScaleStatus: Record<GrafReservaStatus["status"], string> = {
-    PENDENTE: "#f59e0b",   // amber-500
-    CONFIRMADA: "#14b8a6", // teal-500
-    RECUSADA: "#ef4444",   // red-500
-    CANCELADA: "#64748b",  // slate-500
+    PENDENTE: "#f59e0b",   
+    CONFIRMADA: "#14b8a6", 
+    RECUSADA: "#ef4444",   
+    CANCELADA: "#64748b",  
   }
 
-  /* ===========================
-     Loading / Error States
-  ============================ */
+
   if (loading) {
     return (
       <div className="min-h-screen flex flex-col bg-gradient-to-b from-sky-50 via-white to-teal-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-900">

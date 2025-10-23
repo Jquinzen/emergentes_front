@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from "react"
 import { motion } from "framer-motion"
 import { FiSearch } from "react-icons/fi"
 import type { LavanderiaType } from "../utils/LavanderiaType"
-import { useAdminStore } from "./context/AdminContext"
+
 
 const apiUrl = import.meta.env.VITE_API_URL
 
@@ -19,7 +19,7 @@ export default function AdminNovaMaquina() {
   const [loadingLav, setLoadingLav] = useState(true)
   const [submitting, setSubmitting] = useState(false)
   const [search, setSearch] = useState("")
-  const { admin } = useAdminStore()
+
 
   const {
     register,
