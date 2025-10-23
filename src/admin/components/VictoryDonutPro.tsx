@@ -1,4 +1,4 @@
-import  { useMemo } from "react"
+import { useMemo } from "react"
 import {
   VictoryPie,
   VictoryLabel,
@@ -9,12 +9,11 @@ import {
 type Datum = { x: string; y: number }
 
 type Props = {
-  data: Datum[]                
-  title?: string             
-  subtitle?: string          
- 
-  colors: string[]            
-  height?: number          
+  data: Datum[]
+  title?: string
+  subtitle?: string
+  colors: string[]
+  height?: number
 }
 
 export default function VictoryDonutPro({
@@ -33,13 +32,13 @@ export default function VictoryDonutPro({
   const fillByIndex = (i: number) => `url(#slice-grad-${i})`
 
   // rótulo do tooltip
-  const tooltipLabel = ({ datum }: { datum: any }) => {
+  const tooltipLabel = ({ datum }: { datum: Datum }) => {
     const pct = total ? Math.round((datum.y * 100) / total) : 0
     return `${datum.x}\n${datum.y} • ${pct}%`
   }
 
   // largura responsiva usando viewBox
-  const width = 560 
+  const width = 560
   const pieSize = 380
   const centerX = width / 2
   const centerY = 210
@@ -81,7 +80,6 @@ export default function VictoryDonutPro({
             innerRadius={95}
             padAngle={2.2}
             cornerRadius={8}
-            labels={() => ""} 
             startAngle={90}
             endAngle={-270}
             animate={{ duration: 800, easing: "quadInOut" }}
@@ -107,7 +105,7 @@ export default function VictoryDonutPro({
             labelPosition="centroid"
             x="x"
             y="y"
-            colorScale={colors} 
+            colorScale={colors}
             style={{
               data: {
                 // aplica gradiente + borda sutil
@@ -116,7 +114,7 @@ export default function VictoryDonutPro({
                 strokeWidth: 1,
               },
             }}
-         
+            // ✅ apenas UMA prop labels
             labels={tooltipLabel}
           />
 
