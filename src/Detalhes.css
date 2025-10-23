@@ -1,0 +1,112 @@
+/* ===== Base do datepicker ===== */
+.react-datepicker {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+/* Cabeçalho (calendário) */
+.react-datepicker__header:not(.react-datepicker__header--time) {
+  background-color: #0284c7; /* sky-600 */
+  color: #ffffff;
+  border-bottom: none;
+  padding-top: 0.5rem;
+}
+
+/* Título mês/ano – force branco em todas as variantes */
+.react-datepicker__current-month,
+.react-datepicker__current-month--hasYearDropdown,
+.react-datepicker__current-month--hasMonthDropdown {
+  color: #ffffff !important; /* texto branco */
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* Linha das iniciais dos dias (SU, MO, ...) */
+.react-datepicker__day-names {
+  background-color: #f0f9ff; 
+}
+.react-datepicker__day-name {
+  color: #000000 !important; /* iniciais brancas */
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Dias */
+.react-datepicker__day {
+  color: #334155;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+/* Hover dos dias */
+.react-datepicker__day:hover {
+  background-color: #bae6fd; /* sky-200 */
+  color: #2d80ad; /* azul pedido */
+}
+
+/* Dia selecionado */
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #0284c7 !important; /* sky-600 */
+  color: #ffffff !important;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+/* ===== Coluna de horário ===== */
+.react-datepicker__time-container {
+  border-left: 1px solid #e2e8f0;
+}
+
+/* Cabeçalho “Time” — force branco em todas as versões */
+.react-datepicker__header--time {
+  background-color: #0284c7 !important; /* fundo azul */
+  border-bottom: none;
+}
+.react-datepicker-time__header,
+.react-datepicker__time-name,
+.react-datepicker__header--time .react-datepicker-time__header {
+  color: #ffffff !important; /* texto branco */
+  font-weight: 700;
+  text-align: center;
+  padding: 0.4rem;
+}
+
+/* Lista de horários */
+.react-datepicker__time-list {
+  background-color: #ffffff;
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+.react-datepicker__time-list-item {
+  color: #334155;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0;
+  transition: all 0.2s ease;
+}
+/* Hover nos horários */
+.react-datepicker__time-list-item:hover {
+  background-color: #e0f2fe; /* sky-100 */
+  color: #2d80ad; /* mesmo azul do hover dos dias */
+}
+/* Hora selecionada */
+.react-datepicker__time-list-item--selected {
+  background-color: #0284c7 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Setas */
+.react-datepicker__navigation-icon::before {
+  border-color: #ffffff;
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+  .react-datepicker {
+    font-size: 0.85rem;
+  }
+}

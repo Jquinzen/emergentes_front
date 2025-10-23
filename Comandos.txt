@@ -1,0 +1,20 @@
+
+npm install react-datepicker date-fns
+
+npm install victory
+
+npm install framer-motion
+
+npm install cors
+
+npm install recharts
+
+npm i lucide-react
+
+
+Login Usuário - 
+Senha: Aa1@aaaa
+
+Login Admin - 
+E-mail: admin@lavanderia.com
+Senha: Aa1@admin!

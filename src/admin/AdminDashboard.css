@@ -1,0 +1,21 @@
+/* Força esconder rótulos/linhas externos do Pie (Recharts) */
+.recharts-pie-label-text,
+.recharts-pie-label-line {
+  display: none !important;
+}
+
+/* Fundo padrão da área atrás do sidebar + conteúdo */
+html, body, #root {
+  background-color: #f0f9ff4f;
+}
+
+main, #default-sidebar {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+button {
+  cursor: pointer;
+}
+/* f0f9ff4f */
